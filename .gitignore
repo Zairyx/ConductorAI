@@ -1,4 +1,5 @@
+teste_openai.py
 venv/
-.env
+.venv/
 __pycache__/
-*.pyc
+.env
