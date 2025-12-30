@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 streamlit
 crewai
 crewai-tools
@@ -6,3 +7,11 @@ openai
 bcrypt
 sqlite-utils
 pandas
+=======
+streamlit
+crewai
+crewai-tools
+python-dotenv
+bcrypt
+openai
+>>>>>>> 53d8f3e (Primeiro commit do MaestroIA)

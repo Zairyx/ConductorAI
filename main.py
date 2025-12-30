@@ -1,17 +1,17 @@
-from dotenv import load_dotenv
-load_dotenv()
-
 from crewai import Crew
-from agents.pesquisador import pesquisador
-from tasks.pesquisa_task import pesquisa_mercado
+from tasks.pesquisa_task import pesquisa_task
+from core.database import create_tables
 
-crew = Crew(
-    agents=[pesquisador],
-    tasks=[pesquisa_mercado],
-    verbose=True
-)
+def run_maestro():
+    create_tables()
 
-resultado = crew.kickoff()
+    crew = Crew(
+        agents=[pesquisa_task.agent],
+        tasks=[pesquisa_task],
+        verbose=True
+    )
 
-print("\nRESULTADO FINAL:\n")
-print(resultado)
+    return crew.kickoff()
+
+if __name__ == "__main__":
+    print(run_maestro())
