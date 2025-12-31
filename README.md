@@ -223,7 +223,7 @@ streamlit run app.py
 
 ## Licença
 
-Definir
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ---
 
