@@ -26,7 +26,7 @@ else:
 
     objetivo = st.text_input("Objetivo da Campanha")
     publico = st.text_input("Público-Alvo")
-    canais = st.multiselect("Canais", ["Instagram", "Google Ads", "Facebook"])
+    canais = st.multiselect("Canais", ["Instagram", "Facebook", "Google Ads", "Twitter/X", "LinkedIn", "TikTok", "YouTube", "Pinterest", "Snapchat"])
     orcamento = st.number_input("Orçamento", min_value=0.0)
 
     if st.button("Executar Campanha"):

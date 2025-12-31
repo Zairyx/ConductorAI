@@ -34,6 +34,24 @@ def agente_publicador(state: MaestroState) -> MaestroState:
         elif canal_lower == "google ads":
             # Simulação Google Ads
             publicacoes[canal] = f"Campanha Google Ads criada com sucesso (simulado) para: {conteudos[0][:100]}..."
+        elif canal_lower in ["twitter/x", "twitter"]:
+            # Simulação Twitter/X API
+            publicacoes[canal] = f"Post publicado no {canal} com sucesso (simulado): {conteudos[0][:100]}..."
+        elif canal_lower == "linkedin":
+            # Simulação LinkedIn API
+            publicacoes[canal] = f"Post profissional publicado no {canal} com sucesso (simulado): {conteudos[0][:100]}..."
+        elif canal_lower == "tiktok":
+            # Simulação TikTok API
+            publicacoes[canal] = f"Vídeo curto publicado no {canal} com sucesso (simulado): {conteudos[0][:100]}..."
+        elif canal_lower == "youtube":
+            # Simulação YouTube API
+            publicacoes[canal] = f"Vídeo publicado no {canal} com sucesso (simulado): {conteudos[0][:100]}..."
+        elif canal_lower == "pinterest":
+            # Simulação Pinterest API
+            publicacoes[canal] = f"Pin visual publicado no {canal} com sucesso (simulado): {conteudos[0][:100]}..."
+        elif canal_lower == "snapchat":
+            # Simulação Snapchat API
+            publicacoes[canal] = f"Story/Snap publicado no {canal} com sucesso (simulado): {conteudos[0][:100]}..."
         else:
             publicacoes[canal] = f"Publicação em {canal} não suportada ainda."
 

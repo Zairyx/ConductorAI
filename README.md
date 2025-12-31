@@ -12,7 +12,7 @@ O usuário define o objetivo da campanha (ex.: "Lançar produto X para público 
 
 - **Agentes Autônomos**: 6 agentes especializados (Pesquisador, Estrategista, Criador de Conteúdo, Publicador, Otimizador, Maestro).
 - **Orquestração Inteligente**: Fluxo coordenado com LangGraph, garantindo consistência e eficiência.
-- **Integrações**: APIs para OpenAI (GPT + DALL-E), Google Trends, simulações para SEMrush/Meta (expansível).
+- **Integrações**: APIs para OpenAI (GPT + DALL-E), Google Trends, simulações para Meta (Instagram/Facebook), Google Ads, Twitter/X, LinkedIn, TikTok, YouTube, Pinterest, Snapchat (expansível).
 - **Autenticação**: Cadastro e login com JWT e banco SQLite.
 - **Interfaces Múltiplas**: Terminal, API REST (FastAPI) e UI Web (Streamlit).
 - **Memória Vetorial**: FAISS para aprendizado contínuo de campanhas.
