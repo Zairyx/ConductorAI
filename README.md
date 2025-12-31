@@ -12,7 +12,7 @@ O usuário define o objetivo da campanha (ex.: "Lançar produto X para público 
 
 - **Agentes Autônomos**: 6 agentes especializados (Pesquisador, Estrategista, Criador de Conteúdo, Publicador, Otimizador, Maestro).
 - **Orquestração Inteligente**: Fluxo coordenado com LangGraph, garantindo consistência e eficiência.
-- **Integrações**: APIs para OpenAI (GPT + DALL-E), Google Trends, simulações para Meta (Instagram/Facebook), Google Ads, Twitter/X, LinkedIn, TikTok, YouTube, Pinterest, Snapchat (expansível).
+- **Integrações**: APIs reais para OpenAI (GPT + DALL-E), Google Trends, Meta (Instagram/Facebook), Google Ads, Twitter/X, LinkedIn, TikTok, YouTube, Pinterest, Snapchat (com simulações quando chaves não configuradas).
 - **Autenticação**: Cadastro e login com JWT e banco SQLite.
 - **Interfaces Múltiplas**: Terminal, API REST (FastAPI) e UI Web (Streamlit).
 - **Memória Vetorial**: FAISS para aprendizado contínuo de campanhas.
@@ -48,6 +48,33 @@ maestroia/
 - **Python 3.14+**: Compatível com versões recentes.
 - **LangGraph**: Orquestração de agentes.
 - **OpenAI GPT-4o-mini**: Modelos de linguagem.
+- **APIs de Redes Sociais**: Twitter (tweepy), Google Ads, Meta, etc.
+
+## Configuração de APIs
+
+Para usar integrações reais com redes sociais, configure as chaves de API no arquivo `.env`:
+
+```bash
+# Copie .env.example para .env
+cp .env.example .env
+
+# Edite .env com suas chaves:
+OPENAI_API_KEY=your_key
+TWITTER_API_KEY=your_key
+TWITTER_API_SECRET=your_secret
+# ... outras chaves
+```
+
+**APIs suportadas:**
+- **Twitter/X**: Gratuito para posts (até 1.500 tweets/mês)
+- **Meta (Instagram/Facebook)**: Requer app no Facebook Developers
+- **Google Ads**: Requer conta Google Ads certificada
+- **LinkedIn**: Requer app no LinkedIn Developers
+- **TikTok**: Requer conta Business
+- **YouTube**: API gratuita para uploads
+- **Pinterest/Snapchat**: Requerem contas business
+
+Se as chaves não forem configuradas, o sistema usa simulações.
 - **FAISS**: Busca vetorial.
 - **FastAPI**: API REST.
 - **Streamlit**: UI web.
